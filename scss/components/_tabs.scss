@@ -1,0 +1,150 @@
+.tabs {
+  margin: 0 1.3em 4em;
+
+  &__title {
+    padding: 1em 0;
+    border-top: 1px solid rgba(black, 0.2);
+    color: map-get($map: $colors-neutral, $key: grayish-blue);
+    position: relative;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: color 300ms ease;
+  }
+
+  &__title:hover,
+  &__title:focus {
+    color: map-get($map: $colors-primary, $key: soft-red);
+  }
+
+  &__title--active {
+    color: map-get($map: $colors-neutral, $key: very-dark-blue);
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      height: 4px;
+      width: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: map-get($map: $colors-primary, $key: soft-red);
+    }
+  }
+
+  &__title:last-of-type {
+    border-bottom: 1px solid rgba(black, 0.2);
+  }
+}
+
+.tab {
+  margin: 0 1em;
+  display: none;
+
+  &.tab--active {
+    display: block;
+  }
+
+  .button {
+    display: none;
+  }
+
+  &__content {
+    padding: 2em;
+  }
+
+  &__title {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 0 1.3em 1em;
+  }
+
+  &__text {
+    margin: 1em 0;
+    color: map-get($map: $colors-neutral, $key: grayish-blue);
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
+  &__image-container {
+    padding: 1em 1em 2em;
+    position: relative;
+  }
+
+  &__image-container::before {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: -100px;
+    right: 20%;
+    top: 20%;
+    background: map-get($map: $colors-primary, $key: soft-blue);
+    border-top-right-radius: 500px;
+    border-bottom-right-radius: 500px;
+    z-index: -1;
+  }
+
+  &__image {
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+@include for-tablet-landscape-up {
+  .tabs {
+    display: flex;
+    width: max-content;
+    margin: 0 auto 3em;
+
+    &__title {
+      border: 0;
+      border-bottom: 1px solid rgba(black, 0.2);
+      padding: 2em 4em;
+      font-size: 1rem;
+    }
+
+    &__title--active {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+
+  .tab {
+    margin: 0;
+
+    &.tab--active {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__content,
+    &__image-container {
+      width: 50%;
+    }
+
+    &__content {
+      text-align: left;
+      padding-right: 15%;
+      padding-left: 5%;
+    }
+
+    &__title {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    &__text {
+      font-size: 1rem;
+      margin-bottom: 2em;
+    }
+
+    &__image-container {
+      padding-left: 15%;
+    }
+
+    .button {
+      display: inline-block;
+    }
+  }
+}

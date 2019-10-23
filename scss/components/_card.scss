@@ -1,0 +1,49 @@
+.card {
+  box-shadow: 0px 7px 10px rgba(black, 0.1);
+  margin: 3em 2em;
+  padding: 2.5em 1.5em 1.5em;
+  border-radius: 10px;
+  overflow: hidden;
+
+  &__title {
+    color: map-get($map: $colors-neutral, $key: very-dark-blue);
+    margin: 1em 0 0.5em;
+    font-size: 1.1rem;
+  }
+
+  &__subtitle {
+    color: map-get($map: $colors-neutral, $key: grayish-blue);
+    font-size: 0.875rem;
+    margin-bottom: 4em;
+    position: relative;
+  }
+
+  &__subtitle::after {
+    content: '';
+    left: -2em;
+    right: -2em;
+    bottom: -2.5em;
+    position: absolute;
+    background: url('../images/bg-dots.svg');
+    height: 5px;
+  }
+}
+
+@include for-tablet-landscape-up {
+  .card {
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 300ms ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .card:nth-of-type(1) {
+    margin: 0 auto auto;
+  }
+  .card:nth-of-type(3) {
+    margin: auto auto 0;
+  }
+}

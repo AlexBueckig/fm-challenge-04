@@ -1,0 +1,66 @@
+.footer {
+  text-align: center;
+  padding: 2em;
+  background: map-get($map: $colors-neutral, $key: very-dark-blue);
+  color: white;
+  text-transform: uppercase;
+
+  &__logo {
+    color: white;
+  }
+
+  &__title {
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+  }
+
+  &__list {
+    list-style: none;
+    margin-bottom: 2.5em;
+  }
+
+  &__item {
+    margin: 2em 0;
+  }
+
+  &__link {
+    color: white;
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    transition: color 300ms ease;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: map-get($map: $colors-primary, $key: soft-red);
+  }
+
+  &__social {
+    margin: 0 auto;
+  }
+
+  &__icon {
+    margin: 0 1em;
+  }
+}
+
+@include for-tablet-landscape-up {
+  .footer {
+    display: flex;
+    align-items: center;
+
+    &__list {
+      display: flex;
+      align-items: center;
+      margin: 0 2em;
+      flex: 1;
+    }
+
+    &__item {
+      font-size: 0.85rem;
+      margin-left: 2em;
+    }
+  }
+}

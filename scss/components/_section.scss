@@ -1,0 +1,136 @@
+.section {
+  margin: 0 0 8em;
+  margin-right: 0;
+  text-align: center;
+
+  &__main-title,
+  &__title {
+    font-weight: 500;
+    color: map-get($map: $colors-neutral, $key: very-dark-blue);
+  }
+
+  &__main-title {
+    font-size: 1.6rem;
+    margin-bottom: 0.875em;
+  }
+
+  &__title {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 0 1.3em 1em;
+  }
+
+  &__content {
+    color: map-get($map: $colors-neutral, $key: grayish-blue);
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin: 0 1.3em 3em;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 2em;
+  }
+
+  &__image-container {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 3em;
+  }
+
+  &__image-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: -100px;
+    left: 20%;
+    top: 30%;
+    background: map-get($map: $colors-primary, $key: soft-blue);
+    border-top-left-radius: 500px;
+    border-bottom-left-radius: 500px;
+    z-index: -1;
+  }
+}
+
+@include for-tablet-landscape-up {
+  .section {
+    &__title {
+      font-size: 2rem;
+      margin: 0 auto 0.5em;
+      width: 50%;
+    }
+
+    &__image-container {
+      width: 50%;
+    }
+
+    &__container {
+      width: 50%;
+      text-align: left;
+    }
+
+    &__content {
+      width: 500px;
+      font-size: 1rem;
+      margin: 0 auto 3em;
+    }
+
+    &--hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-align: left;
+
+      .section__main-title {
+        font-size: 3rem;
+      }
+
+      .section__content {
+        margin-left: 0;
+        width: 100%;
+      }
+
+      .section__container {
+        order: -1;
+        margin-left: 5em;
+      }
+    }
+
+    &--faq {
+      margin: 0 auto 8em;
+      width: 60%;
+
+      .section__content {
+        width: 80%;
+      }
+    }
+
+    &--download {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      max-width: max-content;
+      margin: 0 auto 8em;
+      gap: 2em;
+
+      .section__title {
+        grid-column: 1 / -1;
+      }
+
+      .section__content {
+        grid-column: 1 / -1;
+      }
+    }
+  }
+}
+
+@include for-desktop-up {
+  .section {
+    &--hero {
+      .section__container {
+        margin-left: 10em;
+      }
+    }
+  }
+}
