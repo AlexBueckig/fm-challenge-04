@@ -25,20 +25,20 @@
     <header class="header">
       <nav class="nav">
         <div class="nav__header">
-          <a href="" class="nav__logo">
+          <a href="#" class="nav__logo" aria-label="Logo with home link">
             <span></span>
           </a>
-          <button id="menu-button" class="nav__menu-button"><span></span></button>
+          <button id="menu-button" class="nav__menu-button" aria-label="menu button"><span></span></button>
         </div>
         <ul class="nav__list">
           <li class="nav__item"><a href="" class="nav__link">Features</a></li>
           <li class="nav__item"><a href="" class="nav__link">Pricing</a></li>
           <li class="nav__item"><a href="" class="nav__link">Contact</a></li>
           <li class="nav__item"><a href="" class="button button--nav">Login</a></li>
-          <div class="nav__social">
-            <a href=""><img src="images/icon-facebook.svg" alt="" class="nav__icon"/></a>
-            <a href=""><img src="images/icon-twitter.svg" alt="" class="nav__icon"/></a>
-          </div>
+          <li class="nav__item--social">
+            <a href=""><img src="images/icon-facebook.svg" alt="facebook icon" class="nav__icon"/></a>
+            <a href=""><img src="images/icon-twitter.svg" alt="twitter-icon" class="nav__icon"/></a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -143,7 +143,9 @@
           <div class="faq__item">
             <p class="faq__question">
               What is Bookmark?
-              <button class="faq__button"><img src="images/icon-arrow.svg" alt="" class="faq__icon" /></button>
+              <button class="faq__button" aria-label="open tab">
+                <img src="images/icon-arrow.svg" alt="" class="faq__icon" />
+              </button>
             </p>
             <div class="faq__answer section__content">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget ultricies fringilla.
@@ -153,7 +155,9 @@
           <div class="faq__item">
             <p class="faq__question">
               How can I request a new browser?
-              <button class="faq__button"><img src="images/icon-arrow.svg" alt="" class="faq__icon" /></button>
+              <button class="faq__button" aria-label="open tab">
+                <img src="images/icon-arrow.svg" alt="" class="faq__icon" />
+              </button>
             </p>
             <div class="faq__answer section__content">
               Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse
@@ -165,7 +169,9 @@
           <div class="faq__item">
             <p class="faq__question">
               Is there a mobile app?
-              <button class="faq__button"><img src="images/icon-arrow.svg" alt="" class="faq__icon" /></button>
+              <button class="faq__button" aria-label="open tab">
+                <img src="images/icon-arrow.svg" alt="" class="faq__icon" />
+              </button>
             </p>
             <div class="faq__answer section__content">
               Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum urna
@@ -176,7 +182,9 @@
           <div class="faq__item">
             <p class="faq__question">
               What about other Chromium browsers?
-              <button class="faq__button"><img src="images/icon-arrow.svg" alt="" class="faq__icon" /></button>
+              <button class="faq__button" aria-label="open tab">
+                <img src="images/icon-arrow.svg" alt="" class="faq__icon" />
+              </button>
             </p>
             <div class="faq__answer section__content">
               Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam vitae
@@ -212,8 +220,8 @@
         <li class="footer__item"><a href="" class="footer__link">Contact</a></li>
       </ul>
       <div class="footer__social">
-        <a href=""><img src="images/icon-facebook.svg" alt="" class="footer__icon"/></a>
-        <a href=""><img src="images/icon-twitter.svg" alt="" class="footer__icon"/></a>
+        <a href=""><img src="images/icon-facebook.svg" alt="facebook icon" class="footer__icon"/></a>
+        <a href=""><img src="images/icon-twitter.svg" alt="twitter icon" class="footer__icon"/></a>
       </div>
     </footer>
 

@@ -4,8 +4,9 @@
 
   &__item {
     border-bottom: 1px solid rgba(map-get($map: $colors-neutral, $key: grayish-blue), 0.2);
-    margin: 1em;
+    margin: 1em auto;
     cursor: pointer;
+    width: 700px;
   }
 
   &__item--open {
